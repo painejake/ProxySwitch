@@ -19,7 +19,7 @@ Watch the [current tickets](http://github.com/painejake/ProxySwitch/issues) to v
 
 ProxySwitch is licensed under a simplified BSD license, a copy of which can be found in our main repository or in the install directory.
 
-Copyright (c) 2009-2011, Jake Paine
+Copyright &copy; 2009-2011, Jake Paine
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
