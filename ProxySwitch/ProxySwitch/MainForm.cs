@@ -94,7 +94,45 @@ namespace ProxySwitch
 
         private void psOffButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (File.Exists("Config.xml"))
+                {
+                    {
+                        // Open registry keys needed
+                        RegistryKey internetSettings = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
 
+                        // Write settings to the registry
+                        internetSettings.SetValue("ProxyEnable", 0);
+
+                        // Close the registry keys used
+                        internetSettings.Close();
+
+                        // Refresh the internet settings using Wininet.dll
+                        // This allows the proxy change to register
+                        InternetSetOption(IntPtr.Zero, INTERNET_OPTION_SETTINGS_CHANGED, IntPtr.Zero, 0);
+                        InternetSetOption(IntPtr.Zero, INTERNET_OPTION_REFRESH, IntPtr.Zero, 0);
+                    }
+
+                    MessageBox.Show("The proxy settings have now been turned off!", "Successful!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    // Here is the hacky part...
+                    // For some reason when we refresh the internet settings it will only refresh once
+                    // Therefore we restart the whole application silently
+                    Application.Restart();
+                }
+                else
+                {
+                    MessageBox.Show("The configuration file could not be found! Please contact the system administrator", "Error!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (SystemException errorCode)
+            {
+                MessageBox.Show(errorCode.Message, "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void psAboutButton_Click(object sender, EventArgs e)
