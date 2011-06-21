@@ -28,9 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(116, 0);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(184, 38);
+            this.MinimizeBox = false;
+            this.Name = "MainForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Text = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.ResumeLayout(false);
+
         }
 
         #endregion
