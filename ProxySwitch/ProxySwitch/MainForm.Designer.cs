@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.psMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.turnProxySettingsOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.psOnButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.psOffButton = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutProxySwitchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.psAboutButton = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.psExitButton = new System.Windows.Forms.ToolStripMenuItem();
             this.psIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.psMenu.SuspendLayout();
             this.SuspendLayout();
@@ -44,48 +44,52 @@
             // psMenu
             // 
             this.psMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem,
-            this.turnProxySettingsOffToolStripMenuItem,
+            this.psOnButton,
+            this.psOffButton,
             this.toolStripSeparator1,
-            this.aboutProxySwitchToolStripMenuItem,
+            this.psAboutButton,
             this.toolStripSeparator2,
-            this.exitToolStripMenuItem1});
+            this.psExitButton});
             this.psMenu.Name = "psMenu";
-            this.psMenu.Size = new System.Drawing.Size(194, 104);
+            this.psMenu.Size = new System.Drawing.Size(194, 126);
             // 
-            // exitToolStripMenuItem
+            // psOnButton
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.exitToolStripMenuItem.Text = "Turn proxy settings on";
+            this.psOnButton.Name = "psOnButton";
+            this.psOnButton.Size = new System.Drawing.Size(193, 22);
+            this.psOnButton.Text = "Turn proxy settings on";
+            this.psOnButton.Click += new System.EventHandler(this.psOnButton_Click);
             // 
-            // turnProxySettingsOffToolStripMenuItem
+            // psOffButton
             // 
-            this.turnProxySettingsOffToolStripMenuItem.Name = "turnProxySettingsOffToolStripMenuItem";
-            this.turnProxySettingsOffToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.turnProxySettingsOffToolStripMenuItem.Text = "Turn proxy settings off";
+            this.psOffButton.Name = "psOffButton";
+            this.psOffButton.Size = new System.Drawing.Size(193, 22);
+            this.psOffButton.Text = "Turn proxy settings off";
+            this.psOffButton.Click += new System.EventHandler(this.psOffButton_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(190, 6);
             // 
-            // aboutProxySwitchToolStripMenuItem
+            // psAboutButton
             // 
-            this.aboutProxySwitchToolStripMenuItem.Name = "aboutProxySwitchToolStripMenuItem";
-            this.aboutProxySwitchToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.aboutProxySwitchToolStripMenuItem.Text = "About ProxySwitch";
+            this.psAboutButton.Name = "psAboutButton";
+            this.psAboutButton.Size = new System.Drawing.Size(193, 22);
+            this.psAboutButton.Text = "About ProxySwitch";
+            this.psAboutButton.Click += new System.EventHandler(this.psAboutButton_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(190, 6);
             // 
-            // exitToolStripMenuItem1
+            // psExitButton
             // 
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(193, 22);
-            this.exitToolStripMenuItem1.Text = "Exit";
+            this.psExitButton.Name = "psExitButton";
+            this.psExitButton.Size = new System.Drawing.Size(193, 22);
+            this.psExitButton.Text = "Exit";
+            this.psExitButton.Click += new System.EventHandler(this.psExitButton_Click);
             // 
             // psIcon
             // 
@@ -115,12 +119,12 @@
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip psMenu;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem turnProxySettingsOffToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem psOnButton;
+        private System.Windows.Forms.ToolStripMenuItem psOffButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem aboutProxySwitchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem psAboutButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem psExitButton;
         private System.Windows.Forms.NotifyIcon psIcon;
     }
 }

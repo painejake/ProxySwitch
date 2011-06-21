@@ -15,5 +15,26 @@ namespace ProxySwitch
         {
             InitializeComponent();
         }
+
+        private void psOnButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void psOffButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void psAboutButton_Click(object sender, EventArgs e)
+        {
+            // Show AboutForm
+        }
+
+        private void psExitButton_Click(object sender, EventArgs e)
+        {
+            // Close ProxySwitch
+            Application.Exit();
+        }
     }
 }
