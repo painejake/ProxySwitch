@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+
+<configuration>
+  
+  <!-- Proxy Address -->
+  <address url='127.0.0.1' />
+
+  <!-- Proxy Port -->
+  <port value='80' />
+
+  <!-- Proxy Exceptions -->
+  <exceptions value='127.0.0.1, localhost' />
+
+</configuration>

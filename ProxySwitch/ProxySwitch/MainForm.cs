@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using System.Runtime.InteropServices;
+using Microsoft.Win32;
 
 namespace ProxySwitch
 {
@@ -29,9 +31,65 @@ namespace ProxySwitch
             InitializeComponent();
         }
 
+        private void Main_Load(object sender, EventArgs e)
+        {
+            // Keep the MainForm hidden
+            if (FormWindowState.Minimized == WindowState)
+                Hide();
+        }
+
         private void psOnButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (File.Exists("Config.xml"))
+                {
+                    // Load the XML configuration
+                    XmlDocument loadDoc = new XmlDocument();
+                    loadDoc.Load(Application.StartupPath + "\\Config.xml");
 
+                    // XML Settings to strings
+                    proxyAddress = loadDoc.SelectSingleNode("/configuration/address").Attributes["url"].InnerText;
+                    proxyPort = loadDoc.SelectSingleNode("/configuration/port").Attributes["value"].InnerText;
+                    proxyException = loadDoc.SelectSingleNode("/configuration/exceptions").Attributes["value"].InnerText;
+
+                    {
+                        // Open registry keys needed
+                        RegistryKey internetSettings = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
+
+                        // Write settings to the registry
+                        internetSettings.SetValue("ProxyEnable", 1);
+                        internetSettings.SetValue("ProxyServer", (proxyAddress) + ":" + (proxyPort));
+                        internetSettings.SetValue("ProxyOverride", (proxyException));
+
+                        // Close the registry keys used
+                        internetSettings.Close();
+
+                        // Refresh the internet settings using Wininet.dll
+                        // This allows the proxy change to register
+                        InternetSetOption(IntPtr.Zero, INTERNET_OPTION_SETTINGS_CHANGED, IntPtr.Zero, 0);
+                        InternetSetOption(IntPtr.Zero, INTERNET_OPTION_REFRESH, IntPtr.Zero, 0);
+                    }
+
+                    MessageBox.Show("The proxy settings have now been turned on!", "Successful!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    // Here is the hacky part...
+                    // For some reason when we refresh the internet settings it will only refresh once
+                    // Therefore we restart the whole application silently
+                    Application.Restart();
+                }
+                else
+                {
+                    MessageBox.Show("The configuration file could not be found! Please contact the system administrator", "Error!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (SystemException errorCode)
+            {
+                MessageBox.Show(errorCode.Message, "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void psOffButton_Click(object sender, EventArgs e)
