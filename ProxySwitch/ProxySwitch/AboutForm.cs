@@ -15,21 +15,49 @@ namespace ProxySwitch
         public AboutForm()
         {
             InitializeComponent();
+            string cpuArchType;
+            Version buildVersion = new Version(Application.ProductVersion);
+            cpuArchType = System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE");
+            buildInfo.Text = ("Build Info: ProxySwitch" + "_v" + buildVersion.Major + "." + buildVersion.Minor + "_Win_" + cpuArchType + "_r" + buildVersion.Revision);
         }
 
         private void psSourceLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/painejake/ProxySwitch");
+            try
+            {
+                Process.Start("https://github.com/painejake/ProxySwitch");
+            }
+            catch (SystemException errorCode)
+            {
+                MessageBox.Show(errorCode.Message, "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void psLicenceLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/painejake/ProxySwitch/blob/master/LICENCE.md");
+            try
+            {
+                Process.Start("https://github.com/painejake/ProxySwitch/blob/master/LICENCE.md");
+            }
+            catch (SystemException errorCode)
+            {
+                MessageBox.Show(errorCode.Message, "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void psIssueLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/painejake/ProxySwitch/issues");
+            try
+            {
+                Process.Start("https://github.com/painejake/ProxySwitch/issues");
+            }
+            catch (SystemException errorCode)
+            {
+                MessageBox.Show(errorCode.Message, "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -34,6 +34,7 @@
             this.psSourceLink = new System.Windows.Forms.LinkLabel();
             this.psLicenceLink = new System.Windows.Forms.LinkLabel();
             this.psIssueLink = new System.Windows.Forms.LinkLabel();
+            this.buildInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,39 +62,49 @@
             this.psSourceLink.AutoSize = true;
             this.psSourceLink.Location = new System.Drawing.Point(6, 181);
             this.psSourceLink.Name = "psSourceLink";
-            this.psSourceLink.Size = new System.Drawing.Size(179, 13);
+            this.psSourceLink.Size = new System.Drawing.Size(69, 13);
             this.psSourceLink.TabIndex = 2;
             this.psSourceLink.TabStop = true;
-            this.psSourceLink.Text = "ProxySwitch Source Code on Github";
+            this.psSourceLink.Text = "Source Code";
             this.psSourceLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.psSourceLink_LinkClicked);
             // 
             // psLicenceLink
             // 
             this.psLicenceLink.AutoSize = true;
-            this.psLicenceLink.Location = new System.Drawing.Point(6, 196);
+            this.psLicenceLink.Location = new System.Drawing.Point(113, 181);
             this.psLicenceLink.Name = "psLicenceLink";
-            this.psLicenceLink.Size = new System.Drawing.Size(141, 13);
+            this.psLicenceLink.Size = new System.Drawing.Size(80, 13);
             this.psLicenceLink.TabIndex = 3;
             this.psLicenceLink.TabStop = true;
-            this.psLicenceLink.Text = "ProxySwitch Licence Details";
+            this.psLicenceLink.Text = "Licence Details";
             this.psLicenceLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.psLicenceLink_LinkClicked);
             // 
             // psIssueLink
             // 
             this.psIssueLink.AutoSize = true;
-            this.psIssueLink.Location = new System.Drawing.Point(6, 211);
+            this.psIssueLink.Location = new System.Drawing.Point(222, 181);
             this.psIssueLink.Name = "psIssueLink";
-            this.psIssueLink.Size = new System.Drawing.Size(133, 13);
+            this.psIssueLink.Size = new System.Drawing.Size(72, 13);
             this.psIssueLink.TabIndex = 4;
             this.psIssueLink.TabStop = true;
-            this.psIssueLink.Text = "ProxySwitch Issue Tracker";
+            this.psIssueLink.Text = "Issue Tracker";
             this.psIssueLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.psIssueLink_LinkClicked);
+            // 
+            // buildInfo
+            // 
+            this.buildInfo.AutoSize = true;
+            this.buildInfo.Location = new System.Drawing.Point(6, 206);
+            this.buildInfo.Name = "buildInfo";
+            this.buildInfo.Size = new System.Drawing.Size(47, 13);
+            this.buildInfo.TabIndex = 5;
+            this.buildInfo.Text = "buildInfo";
             // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 234);
+            this.ClientSize = new System.Drawing.Size(306, 228);
+            this.Controls.Add(this.buildInfo);
             this.Controls.Add(this.psIssueLink);
             this.Controls.Add(this.psLicenceLink);
             this.Controls.Add(this.psSourceLink);
@@ -117,5 +128,6 @@
         private System.Windows.Forms.LinkLabel psSourceLink;
         private System.Windows.Forms.LinkLabel psLicenceLink;
         private System.Windows.Forms.LinkLabel psIssueLink;
+        private System.Windows.Forms.Label buildInfo;
     }
 }
