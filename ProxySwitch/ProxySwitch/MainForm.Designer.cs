@@ -95,7 +95,7 @@
             // 
             this.psIcon.ContextMenuStrip = this.psMenu;
             this.psIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("psIcon.Icon")));
-            this.psIcon.Text = "notifyIcon1";
+            this.psIcon.Text = "Proxy Switch";
             this.psIcon.Visible = true;
             // 
             // MainForm
