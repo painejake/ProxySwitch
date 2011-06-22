@@ -24,7 +24,7 @@ namespace ProxySwitch
 
         private void psLicenceLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("");
+            Process.Start("https://github.com/painejake/ProxySwitch/blob/master/LICENCE.md");
         }
 
         private void psIssueLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

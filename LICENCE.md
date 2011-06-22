@@ -1,6 +1,6 @@
 # Licence
 
-ProxySwitch is licensed under a simplified BSD license, a copy of which can be found in our main repository or in the install directory.
+## Simplified BSD license:
 
 Copyright &copy; 2009-2011, Jake Paine
 All rights reserved.
