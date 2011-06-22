@@ -137,7 +137,8 @@ namespace ProxySwitch
 
         private void psAboutButton_Click(object sender, EventArgs e)
         {
-            // Show AboutForm
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
         }
 
         private void psExitButton_Click(object sender, EventArgs e)

@@ -59,5 +59,12 @@ namespace ProxySwitch.Properties {
                 resourceCulture = value;
             }
         }
+        
+        internal static System.Drawing.Bitmap ProxySwitchLogoTextL {
+            get {
+                object obj = ResourceManager.GetObject("ProxySwitchLogoTextL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
