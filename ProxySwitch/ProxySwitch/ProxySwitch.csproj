@@ -51,7 +51,7 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="git_version.cs" />
+    <Compile Include="GitAssembly.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +90,13 @@
   <ItemGroup>
     <Content Include="Config.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <None Include="Media\ProxySwitchLogoTextL.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>"C:\Program Files (x86)\Git\bin\git.exe" rev-parse --short HEAD | "C:\Program Files (x86)\Git\bin\sed.exe" -e 's/\(.*\)/[assembly: AssemblyGitBuild(\"\1\")]/' &gt; $(ProjectDir)git_version.cs</PreBuildEvent>
+    <PreBuildEvent>"C:\Program Files (x86)\Git\bin\git.exe" rev-parse --short HEAD | "C:\Program Files (x86)\Git\bin\sed.exe" -e 's/\(.*\)/using ProxySwitch;[assembly: AssemblyGitBuild(\"\1\")]/' &gt; $(ProjectDir)GitAssembly.cs</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

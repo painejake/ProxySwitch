@@ -15,15 +15,6 @@ namespace ProxySwitch
 {
     public partial class MainForm : Form
     {
-        // Used for displaying the Git head info in
-        // the application for debugging purposes.
-        [AttributeUsage(AttributeTargets.Assembly)]
-        public class AssemblyGitBuild : Attribute
-        {
-            public string gitBuild { get; private set; }
-            public AssemblyGitBuild(string txt) { gitBuild = txt; }
-        }
-
         // Import wininet.dll to allow us to refresh Internet Settings
         // without exiting the web browser.
         [DllImport("wininet.dll")]
@@ -64,7 +55,8 @@ namespace ProxySwitch
 
                     {
                         // Open registry keys needed
-                        RegistryKey internetSettings = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
+                        RegistryKey internetSettings = Registry.CurrentUser.OpenSubKey
+                            ("Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
 
                         // Write settings to the registry
                         internetSettings.SetValue("ProxyEnable", 1);
@@ -109,7 +101,8 @@ namespace ProxySwitch
                 {
                     {
                         // Open registry keys needed
-                        RegistryKey internetSettings = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
+                        RegistryKey internetSettings = Registry.CurrentUser.OpenSubKey
+                            ("Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
 
                         // Write settings to the registry
                         internetSettings.SetValue("ProxyEnable", 0);

@@ -14,11 +14,21 @@ namespace ProxySwitch
     {
         public AboutForm()
         {
+            string gitBuild = "unknown";
+            try
+            {
+                gitBuild = typeof(AssemblyGitBuild).Assembly.GetCustomAttributes(typeof(AssemblyGitBuild), false).Cast<AssemblyGitBuild>().First().gitBuild;
+            }
+            catch (Exception errorCode)
+            {
+                MessageBox.Show(errorCode.Message, "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             InitializeComponent();
             string cpuArchType;
             Version buildVersion = new Version(Application.ProductVersion);
             cpuArchType = System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE");
-            buildInfo.Text = ("Build Info: ProxySwitch" + "_v" + buildVersion.Major + "." + buildVersion.Minor + "_Win_" + cpuArchType + "_r" + buildVersion.Revision);
+            buildInfo.Text = ("Build Info: ProxySwitch" + "_v" + buildVersion.Major + "." + buildVersion.Minor + "_Win_" + cpuArchType + "_r" + gitBuild);
         }
 
         private void psSourceLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
