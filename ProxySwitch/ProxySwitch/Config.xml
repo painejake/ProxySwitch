@@ -11,4 +11,10 @@
   <!-- Proxy Exceptions -->
   <exceptions value='127.0.0.1, localhost' />
 
+  <!-- Automatic Updates -->
+  <autoupdates value='1' />
+  
+  <!-- Update URL -->
+  <update url='http://github.com/painejake/proxyswitch/' />
+  
 </configuration>

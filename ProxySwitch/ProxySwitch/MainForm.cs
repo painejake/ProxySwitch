@@ -52,7 +52,7 @@ namespace ProxySwitch
                     XmlDocument loadDoc = new XmlDocument();
                     loadDoc.Load(Application.StartupPath + "\\Config.xml");
 
-                    // XML Settings to strings
+                    // Required XML Settings to strings
                     proxyAddress = loadDoc.SelectSingleNode("/configuration/address").Attributes["url"].InnerText;
                     proxyPort = loadDoc.SelectSingleNode("/configuration/port").Attributes["value"].InnerText;
                     proxyException = loadDoc.SelectSingleNode("/configuration/exceptions").Attributes["value"].InnerText;
