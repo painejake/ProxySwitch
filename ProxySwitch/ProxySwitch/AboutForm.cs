@@ -28,7 +28,7 @@ namespace ProxySwitch
             string cpuArchType;
             Version buildVersion = new Version(Application.ProductVersion);
             cpuArchType = System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE");
-            buildInfo.Text = ("Build Info: ProxySwitch" + "_v" + buildVersion.Major + "." + buildVersion.Minor + "_Win_" + cpuArchType + "_r" + gitBuild);
+            buildInfo.Text = ("Build Info: ProxySwitch" + "_v" + buildVersion.Major + "." + buildVersion.Minor + "_Win_" + cpuArchType + "_hash:" + gitBuild);
         }
 
         private void psSourceLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
