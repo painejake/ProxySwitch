@@ -15,8 +15,6 @@ namespace ProxySwitch
 {
     public partial class UpdateForm : Form
     {
-        string updateURL;
-        string result;
         string updateAddress;
         string autoUpdates;
 
@@ -51,6 +49,7 @@ namespace ProxySwitch
                     {
                         // Check version of local file and current supported version
                         string versionURL = updateAddress + "version";
+
                         WebClient Client = new WebClient();
                         string result = Client.DownloadString(versionURL);
 
@@ -62,14 +61,14 @@ namespace ProxySwitch
                         {
                             // Update local version to server version
                             // A better way of doing this silently needs to be used
-                            DialogResult UpdateResult = MessageBox.Show("A update for Proxy Switch avaliable! Would you like to downlo ad the latest version?", "Update Avaliable!",
+                            DialogResult updateResult = MessageBox.Show("A update for Proxy Switch avaliable! Would you like to download the latest version?", "Update Avaliable!",
                                 MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
-                            if (UpdateResult == DialogResult.Yes)
+                            if (updateResult == DialogResult.Yes)
                             {
                                 Application.Exit();
                                 System.Diagnostics.Process.Start(updateAddress + "update.exe");
                             }
-                            else if (UpdateResult == DialogResult.No)
+                            else if (updateResult == DialogResult.No)
                             {
                                 // Do nothing
                             }
