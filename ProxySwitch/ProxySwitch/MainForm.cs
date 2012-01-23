@@ -36,6 +36,10 @@ namespace ProxySwitch
             // Keep the MainForm hidden
             if (FormWindowState.Minimized == WindowState)
                 Hide();
+
+            // Automatic updates
+            UpdateForm updateForm = new UpdateForm();
+            updateForm.Show();
         }
 
         private void psOnButton_Click(object sender, EventArgs e)
