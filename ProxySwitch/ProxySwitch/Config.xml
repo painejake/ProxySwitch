@@ -15,6 +15,6 @@
   <autoupdates value='1' />
   
   <!-- Update URL -->
-  <update url='http://github.com/painejake/proxyswitch/update/' />
+  <update url='https://raw.github.com/painejake/ProxySwitch/master/' />
   
 </configuration>
