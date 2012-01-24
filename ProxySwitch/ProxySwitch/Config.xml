@@ -12,6 +12,7 @@
   <exceptions value='127.0.0.1, localhost' />
 
   <!-- Automatic Updates -->
+  <!-- 0 Disable - 1 Enable -->
   <autoupdates value='1' />
   
   <!-- Update URL -->

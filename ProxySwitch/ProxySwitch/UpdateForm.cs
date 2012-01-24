@@ -82,7 +82,7 @@ namespace ProxySwitch
             }
             catch (System.Exception)
             {
-                // do nothing
+                // Do nothing
                 // this stops the errors when proxy settings not active
             }
         }

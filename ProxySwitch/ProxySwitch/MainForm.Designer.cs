@@ -109,7 +109,7 @@
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "MainForm";
+            this.Text = "ProxySwitch";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.psMenu.ResumeLayout(false);
             this.ResumeLayout(false);
