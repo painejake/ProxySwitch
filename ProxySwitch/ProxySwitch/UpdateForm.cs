@@ -45,13 +45,15 @@ namespace ProxySwitch
                     updateAddress = loadDoc.SelectSingleNode("/configuration/update").Attributes["url"].InnerText;
                     autoUpdates = loadDoc.SelectSingleNode("/configuration/autoupdates").Attributes["value"].InnerText;
 
+                    string updateFile = updateAddress + "update.exe";
+
                     if (autoUpdates == "1")
                     {
                         // Check version of local file and current supported version
                         string versionURL = updateAddress + "version";
 
-                        WebClient Client = new WebClient();
-                        string result = Client.DownloadString(versionURL);
+                        WebClient vClient = new WebClient();
+                        string result = vClient.DownloadString(versionURL);
 
                         if (result.Contains("ProxySwitch_v1.0"))
                         {
@@ -66,7 +68,12 @@ namespace ProxySwitch
                             if (updateResult == DialogResult.Yes)
                             {
                                 Application.Exit();
-                                System.Diagnostics.Process.Start(updateAddress + "update.exe");
+
+                                WebClient client = new WebClient();
+                                client.DownloadFileCompleted +=
+                                    new AsyncCompletedEventHandler(client_DownloadFileCompleted);
+
+                                client.DownloadFileAsync(new Uri(updateAddress), @"update.exe");
                             }
                             else if (updateResult == DialogResult.No)
                             {
@@ -85,6 +92,15 @@ namespace ProxySwitch
                 // Do nothing
                 // this stops the errors when proxy settings not active
             }
+        }
+        void client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"update.exe");
+
+            System.Diagnostics.Process.Start(@"ProxySwitch.exe");
+
+            MessageBox.Show("ProxySwitch has been updated!", "Complete!",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

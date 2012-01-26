@@ -1,1 +1,1 @@
-using ProxySwitch;[assembly: AssemblyGitBuild("515ac69")]
+using ProxySwitch;[assembly: AssemblyGitBuild("fc86f35")]
