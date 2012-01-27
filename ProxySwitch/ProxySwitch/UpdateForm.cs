@@ -73,7 +73,7 @@ namespace ProxySwitch
                                 client.DownloadFileCompleted +=
                                     new AsyncCompletedEventHandler(client_DownloadFileCompleted);
 
-                                client.DownloadFileAsync(new Uri(updateAddress), @"update.exe");
+                                client.DownloadFileAsync(new Uri(updateFile), @"update.exe");
                             }
                             else if (updateResult == DialogResult.No)
                             {
