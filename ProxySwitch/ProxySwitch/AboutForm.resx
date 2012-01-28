@@ -118,13 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="desLabel.Text" xml:space="preserve">
-    <value>ProxySwitch is a application designed to make turning proxy
-settings on or off, on the fly with one click. It uses the system
-tray and has a wee footprint!
+    <value>What is ProxySwitch? ProxySwitch is a rewrite of the original
+ProxySwitch on GoogleCode. The project is aimed at people
+who administrate or work with networks behind a proxy with
+users who use their laptops and computers behind the proxy
+and at home/off site where a proxy server is not applicable.
 
-ProxySwitch is open source. Source code and licence details
-can be found below. You can also visit the issue tracker for
-any support requests.</value>
+ProxySwitch's code is entirely C# based using .NET 4.0 client
+profile to make use of features and platform compatibility
+alike. If you would like to contribute please feel free to submit
+pull requests.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -53,14 +53,14 @@
             this.desLabel.AutoSize = true;
             this.desLabel.Location = new System.Drawing.Point(6, 76);
             this.desLabel.Name = "desLabel";
-            this.desLabel.Size = new System.Drawing.Size(295, 91);
+            this.desLabel.Size = new System.Drawing.Size(296, 130);
             this.desLabel.TabIndex = 1;
             this.desLabel.Text = resources.GetString("desLabel.Text");
             // 
             // psSourceLink
             // 
             this.psSourceLink.AutoSize = true;
-            this.psSourceLink.Location = new System.Drawing.Point(6, 181);
+            this.psSourceLink.Location = new System.Drawing.Point(6, 238);
             this.psSourceLink.Name = "psSourceLink";
             this.psSourceLink.Size = new System.Drawing.Size(69, 13);
             this.psSourceLink.TabIndex = 2;
@@ -71,7 +71,7 @@
             // psLicenceLink
             // 
             this.psLicenceLink.AutoSize = true;
-            this.psLicenceLink.Location = new System.Drawing.Point(113, 181);
+            this.psLicenceLink.Location = new System.Drawing.Point(110, 238);
             this.psLicenceLink.Name = "psLicenceLink";
             this.psLicenceLink.Size = new System.Drawing.Size(80, 13);
             this.psLicenceLink.TabIndex = 3;
@@ -82,7 +82,7 @@
             // psIssueLink
             // 
             this.psIssueLink.AutoSize = true;
-            this.psIssueLink.Location = new System.Drawing.Point(222, 181);
+            this.psIssueLink.Location = new System.Drawing.Point(222, 238);
             this.psIssueLink.Name = "psIssueLink";
             this.psIssueLink.Size = new System.Drawing.Size(72, 13);
             this.psIssueLink.TabIndex = 4;
@@ -93,7 +93,7 @@
             // buildInfo
             // 
             this.buildInfo.AutoSize = true;
-            this.buildInfo.Location = new System.Drawing.Point(6, 206);
+            this.buildInfo.Location = new System.Drawing.Point(6, 216);
             this.buildInfo.Name = "buildInfo";
             this.buildInfo.Size = new System.Drawing.Size(47, 13);
             this.buildInfo.TabIndex = 5;
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 228);
+            this.ClientSize = new System.Drawing.Size(306, 263);
             this.Controls.Add(this.buildInfo);
             this.Controls.Add(this.psIssueLink);
             this.Controls.Add(this.psLicenceLink);
