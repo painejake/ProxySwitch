@@ -55,7 +55,7 @@ namespace ProxySwitch
                         WebClient vClient = new WebClient();
                         string result = vClient.DownloadString(versionURL);
 
-                        if (result.Contains("ProxySwitch_v1.0"))
+                        if (result.Contains("ProxySwitch_v1.1"))
                         {
                             // Do nothing
                         }
