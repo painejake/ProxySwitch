@@ -20,8 +20,6 @@ namespace ProxySwitch
 
         private void UpdateForm_Load(object sender, EventArgs e)
         {
-            psUpdateWorker.RunWorkerAsync();
-
             if (FormWindowState.Minimized == WindowState)
                 Hide();
         }
@@ -29,6 +27,8 @@ namespace ProxySwitch
         public UpdateForm()
         {
             InitializeComponent();
+
+            psUpdateWorker.RunWorkerAsync();
         }
 
         private void psUpdateWorker_DoWork(object sender, DoWorkEventArgs e)
