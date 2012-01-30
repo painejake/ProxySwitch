@@ -50,7 +50,7 @@ namespace ProxySwitch
                     if (autoUpdates == "1")
                     {
                         // Check version of local file and current supported version
-                        string versionURL = updateAddress + "version";
+                        string versionURL = updateAddress + "update/version.txt";
 
                         WebClient vClient = new WebClient();
                         string result = vClient.DownloadString(versionURL);
