@@ -137,6 +137,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Media\ProxySwitchIconS.ico" />
+    <Content Include="Media\ProxySwitchLogoL.png" />
     <None Include="Media\ProxySwitchLogoTextL.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
