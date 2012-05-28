@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jake Paine")]
 [assembly: AssemblyProduct("ProxySwitch")]
-[assembly: AssemblyCopyright("Copyright © Jake Paine 2009-2011")]
+[assembly: AssemblyCopyright("Copyright © Jake Paine 2009-2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

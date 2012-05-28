@@ -171,7 +171,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProxySwitchSetup"
         "ProductCode" = "8:{7D109B9D-E7A8-42DD-85DC-41A96CE43E3E}"
-        "PackageCode" = "8:{81DB2AEA-2ED3-472A-8B56-4438F463874C}"
+        "PackageCode" = "8:{1EA01F92-82C9-4115-8427-4ECE57307BF7}"
         "UpgradeCode" = "8:{5B38114F-7D63-4467-8030-913E9479EBF8}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

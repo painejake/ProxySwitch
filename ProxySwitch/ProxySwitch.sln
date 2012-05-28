@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxySwitch", "ProxySwitch\ProxySwitch.csproj", "{4993E442-4F4B-4C43-BF81-5A135EDB81CE}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ProxySwitchSetup", "ProxySwitchSetup\ProxySwitchSetup.vdproj", "{F142E435-D077-4931-8871-11EA992D305A}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ProxySwitchSetup", "ProxySwitchSetup\ProxySwitchSetup.vdproj", "{9460B460-6DC6-4081-A7DC-C9BC92377F68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +21,10 @@ Global
 		{4993E442-4F4B-4C43-BF81-5A135EDB81CE}.Release|x64.Build.0 = Release|x64
 		{4993E442-4F4B-4C43-BF81-5A135EDB81CE}.Release|x86.ActiveCfg = Release|x86
 		{4993E442-4F4B-4C43-BF81-5A135EDB81CE}.Release|x86.Build.0 = Release|x86
-		{F142E435-D077-4931-8871-11EA992D305A}.Debug|x64.ActiveCfg = Debug
-		{F142E435-D077-4931-8871-11EA992D305A}.Debug|x64.Build.0 = Debug
-		{F142E435-D077-4931-8871-11EA992D305A}.Debug|x86.ActiveCfg = Debug
-		{F142E435-D077-4931-8871-11EA992D305A}.Debug|x86.Build.0 = Debug
-		{F142E435-D077-4931-8871-11EA992D305A}.Release|x64.ActiveCfg = Release
-		{F142E435-D077-4931-8871-11EA992D305A}.Release|x64.Build.0 = Release
-		{F142E435-D077-4931-8871-11EA992D305A}.Release|x86.ActiveCfg = Release
-		{F142E435-D077-4931-8871-11EA992D305A}.Release|x86.Build.0 = Release
+		{9460B460-6DC6-4081-A7DC-C9BC92377F68}.Debug|x64.ActiveCfg = Debug
+		{9460B460-6DC6-4081-A7DC-C9BC92377F68}.Debug|x86.ActiveCfg = Debug
+		{9460B460-6DC6-4081-A7DC-C9BC92377F68}.Release|x64.ActiveCfg = Release
+		{9460B460-6DC6-4081-A7DC-C9BC92377F68}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

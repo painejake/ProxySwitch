@@ -14,6 +14,7 @@ namespace ProxySwitch
     {
         public AboutForm()
         {
+            // Get current git hash to a string for identifying builds
             string gitBuild = "unknown";
             try
             {
