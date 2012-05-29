@@ -29,24 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.desLabel = new System.Windows.Forms.Label();
             this.psSourceLink = new System.Windows.Forms.LinkLabel();
             this.psLicenceLink = new System.Windows.Forms.LinkLabel();
             this.psIssueLink = new System.Windows.Forms.LinkLabel();
             this.buildInfo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.aboutLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.aboutLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::ProxySwitch.Properties.Resources.ProxySwitchLogoTextL;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 72);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // desLabel
             // 
@@ -99,17 +89,27 @@
             this.buildInfo.TabIndex = 5;
             this.buildInfo.Text = "buildInfo";
             // 
+            // aboutLogo
+            // 
+            this.aboutLogo.BackgroundImage = global::ProxySwitch.Properties.Resources.ProxySwitchLogo;
+            this.aboutLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.aboutLogo.Location = new System.Drawing.Point(0, 0);
+            this.aboutLogo.Name = "aboutLogo";
+            this.aboutLogo.Size = new System.Drawing.Size(305, 75);
+            this.aboutLogo.TabIndex = 6;
+            this.aboutLogo.TabStop = false;
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(306, 263);
+            this.Controls.Add(this.aboutLogo);
             this.Controls.Add(this.buildInfo);
             this.Controls.Add(this.psIssueLink);
             this.Controls.Add(this.psLicenceLink);
             this.Controls.Add(this.psSourceLink);
             this.Controls.Add(this.desLabel);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -117,7 +117,7 @@
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About ProxySwitch";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aboutLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,11 +125,11 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label desLabel;
         private System.Windows.Forms.LinkLabel psSourceLink;
         private System.Windows.Forms.LinkLabel psLicenceLink;
         private System.Windows.Forms.LinkLabel psIssueLink;
         private System.Windows.Forms.Label buildInfo;
+        private System.Windows.Forms.PictureBox aboutLogo;
     }
 }

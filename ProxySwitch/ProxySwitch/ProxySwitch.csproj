@@ -66,7 +66,7 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Media\ProxySwitchIconS.ico</ApplicationIcon>
+    <ApplicationIcon>Media\ProxySwitch_128x128.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -136,10 +136,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Media\ProxySwitchIconS.ico" />
-    <Content Include="Media\ProxySwitchLogoL.png" />
+    <Content Include="Media\ProxySwitchIcon.png" />
+    <Content Include="Media\ProxySwitchLogo.png" />
+    <Content Include="Media\ProxySwitch_128x128.ico" />
+    <Content Include="Media\ProxySwitch_32x32.ico" />
     <Content Include="ProxySwitchIconS.ico" />
-    <None Include="Media\ProxySwitchLogoTextL.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
