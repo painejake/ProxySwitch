@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_48AC5A597F954045A3C7ADBFA74C0652"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_ACAC93975C794D37A6A26415255C3D44"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -49,6 +55,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -65,6 +92,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -114,6 +162,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_48AC5A597F954045A3C7ADBFA74C0652"
+            {
+            "SourcePath" = "8:..\\ProxySwitch\\Media\\ProxySwitchIconS.ico"
+            "TargetName" = "8:ProxySwitchIconS.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_F610AAA51F7C44F185378AE1B7FEFBCD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:TRUE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -133,7 +201,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_F610AAA51F7C44F185378AE1B7FEFBCD"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -169,26 +237,26 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:ProxySwitchSetup"
-        "ProductCode" = "8:{7D109B9D-E7A8-42DD-85DC-41A96CE43E3E}"
-        "PackageCode" = "8:{1EA01F92-82C9-4115-8427-4ECE57307BF7}"
-        "UpgradeCode" = "8:{5B38114F-7D63-4467-8030-913E9479EBF8}"
+        "ProductName" = "8:ProxySwitch"
+        "ProductCode" = "8:{259F7D46-1874-4607-8849-AAEDF7769E0B}"
+        "PackageCode" = "8:{00DB668F-9E79-4288-9FBC-31EEF7FC4588}"
+        "UpgradeCode" = "8:{27C23093-7C0D-4EFB-886B-553F588EFA6C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
-        "DetectNewerInstalledVersion" = "11:TRUE"
+        "RemovePreviousVersions" = "11:TRUE"
+        "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:ProxySwitch"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/painejake/ProxySwitch/issues"
-        "Title" = "8:ProxySwitchSetup"
+        "Title" = "8:ProxySwitch Setup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Jake Paine"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:ProxySwitch is designed to make switching between proxy settings easy with the click of a button."
         "ARPURLINFOABOUT" = "8:https://github.com/painejake/ProxySwitch"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_48AC5A597F954045A3C7ADBFA74C0652"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -291,6 +359,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_5A15C56EAAEA4EB4866F9F39FC6E5B50"
+            {
+            "Name" = "8:Shortcut to Primary output from ProxySwitch (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_ACAC93975C794D37A6A26415255C3D44"
+            "Folder" = "8:_68B67ECBAC8C494487E9263924832582"
+            "WorkingFolder" = "8:_F610AAA51F7C44F185378AE1B7FEFBCD"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E98EF5E12F1542C281101EA98B2BAB75"
+            {
+            "Name" = "8:Shortcut to Primary output from ProxySwitch (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_ACAC93975C794D37A6A26415255C3D44"
+            "Folder" = "8:_FC331DFBA2CB4D9B89F9C76E7B7D80EB"
+            "WorkingFolder" = "8:_F610AAA51F7C44F185378AE1B7FEFBCD"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
