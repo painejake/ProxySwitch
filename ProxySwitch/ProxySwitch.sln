@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxySwitch", "ProxySwitch\ProxySwitch.csproj", "{4993E442-4F4B-4C43-BF81-5A135EDB81CE}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ProxySwitchSetup", "ProxySwitchSetup\ProxySwitchSetup.vdproj", "{9460B460-6DC6-4081-A7DC-C9BC92377F68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxySwitchMono", "ProxySwitchMono\ProxySwitchMono.csproj", "{D4EA5949-88E0-458F-B21E-876A35CB1686}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ProxySwitchSetup", "ProxySwitchSetup\ProxySwitchSetup.vdproj", "{ED28CB48-0050-403E-8592-2D3F1489DF1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +23,27 @@ Global
 		{4993E442-4F4B-4C43-BF81-5A135EDB81CE}.Release|x64.Build.0 = Release|x64
 		{4993E442-4F4B-4C43-BF81-5A135EDB81CE}.Release|x86.ActiveCfg = Release|x86
 		{4993E442-4F4B-4C43-BF81-5A135EDB81CE}.Release|x86.Build.0 = Release|x86
-		{9460B460-6DC6-4081-A7DC-C9BC92377F68}.Debug|x64.ActiveCfg = Debug
-		{9460B460-6DC6-4081-A7DC-C9BC92377F68}.Debug|x86.ActiveCfg = Debug
-		{9460B460-6DC6-4081-A7DC-C9BC92377F68}.Release|x64.ActiveCfg = Release
-		{9460B460-6DC6-4081-A7DC-C9BC92377F68}.Release|x86.ActiveCfg = Release
+		{D4EA5949-88E0-458F-B21E-876A35CB1686}.Debug|x64.ActiveCfg = Debug|x64
+		{D4EA5949-88E0-458F-B21E-876A35CB1686}.Debug|x64.Build.0 = Debug|x64
+		{D4EA5949-88E0-458F-B21E-876A35CB1686}.Debug|x86.ActiveCfg = Debug|x64
+		{D4EA5949-88E0-458F-B21E-876A35CB1686}.Debug|x86.Build.0 = Debug|x64
+		{D4EA5949-88E0-458F-B21E-876A35CB1686}.Release|x64.ActiveCfg = Release|x64
+		{D4EA5949-88E0-458F-B21E-876A35CB1686}.Release|x64.Build.0 = Release|x64
+		{D4EA5949-88E0-458F-B21E-876A35CB1686}.Release|x86.ActiveCfg = Release|x64
+		{D4EA5949-88E0-458F-B21E-876A35CB1686}.Release|x86.Build.0 = Release|x64
+		{ED28CB48-0050-403E-8592-2D3F1489DF1C}.Debug|x64.ActiveCfg = Debug
+		{ED28CB48-0050-403E-8592-2D3F1489DF1C}.Debug|x64.Build.0 = Debug
+		{ED28CB48-0050-403E-8592-2D3F1489DF1C}.Debug|x86.ActiveCfg = Debug
+		{ED28CB48-0050-403E-8592-2D3F1489DF1C}.Debug|x86.Build.0 = Debug
+		{ED28CB48-0050-403E-8592-2D3F1489DF1C}.Release|x64.ActiveCfg = Release
+		{ED28CB48-0050-403E-8592-2D3F1489DF1C}.Release|x64.Build.0 = Release
+		{ED28CB48-0050-403E-8592-2D3F1489DF1C}.Release|x86.ActiveCfg = Release
+		{ED28CB48-0050-403E-8592-2D3F1489DF1C}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ProxySwitch\ProxySwitch.csproj
 	EndGlobalSection
 EndGlobal
