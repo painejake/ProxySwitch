@@ -213,7 +213,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProxySwitch"
         "ProductCode" = "8:{259F7D46-1874-4607-8849-AAEDF7769E0B}"
-        "PackageCode" = "8:{F7D54442-AC6C-44BA-A3F8-A8977DCEA724}"
+        "PackageCode" = "8:{FBF96F29-445D-49F6-8301-E602EB720EAB}"
         "UpgradeCode" = "8:{27C23093-7C0D-4EFB-886B-553F588EFA6C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -762,7 +762,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ACAC93975C794D37A6A26415255C3D44"
             {
-            "SourcePath" = "8:..\\ProxySwitch\\obj\\x64\\Debug\\ProxySwitch.exe"
+            "SourcePath" = "8:..\\ProxySwitch\\obj\\x86\\Release\\ProxySwitch.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F610AAA51F7C44F185378AE1B7FEFBCD"
